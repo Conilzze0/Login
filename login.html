@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>K.J.Pizza</title>
+    <style type="text/css">
+        input, select, textarea {
+            margin-bottom:20px;
+        }
+        /*Melyik színből melyikbe menjen át az animáció*/
+        @keyframes kj {
+            from {
+                background-color: #ff4202;
+            }
+            to {
+                background-color: #d2ffce;
+            }
+        }
+        /*Login képernyő animációja*/
+        .animation {
+            animation-iteration-count: infinite;
+            animation-name: kj;
+            animation-duration: 0.5s;
+            animation-direction: alternate;
+            color: #ff4202;
+            text-shadow: 1px 1px 2px red, 0 0 15px green;
+        }
+        /*Asztal*/
+        .border {
+            box-sizing:content-box;
+            border:7px solid #afc4cc;
+            padding:10px;
+            margin:0px;
+            width:300px;
+            height:350px;
+            background-color: #afc4cc;
+            border-radius: 10px 10px 10px 10px;
+        }
+        /*Body rész formázása*/
+        body
+        {
+            font-family: "Segoe UI",Arial,sans-serif;
+            background: #d2ffce;
+            color: #ff4202;
+            width:25%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body >
+
+<div class="animation"><h1 >Üdvözöllek a K.J.Pizza oldalán!</h1></div><br>
+<img src="img/pizza.jpg" alt="fpi" title="K.J.Pizza" width="330" height="160"/>
+<div><h3>Kérlek, jelentkezz be!</h3></div>
+<?--bejelentkezési adatok-->
+<form action="login.php" method="post" enctype="multipart/form-data" class="border" >
+    <label>Felhasználónév: <input type="text" name="user" value="" placeholder="Felhasználónév" maxlength="20" autofocus tabindex="1" /></label> <br/>
+    <label>Jelszó: <input type="text" name="password" value="" placeholder="Jelszó" maxlength="20" autofocus tabindex="2" /></label> <br/>
+    <a href="main.html"><input type="button" value="Bejelentkezés" /></a>
+    <input type="reset" value="Törlés" /> <br/>
+    <a href="new_user.html" ><input type="button" value="Regisztráció" /> <br/></a>
+    </form>
+</body>
+</html>
